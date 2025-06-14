@@ -1,0 +1,267 @@
+*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapil Harode - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Kapil Harode</div>
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+        <div class="menu-icon">☰</div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Hi, I'm Kapil Harode</h1>
+            <h2>Full Stack Web Developer</h2>
+            <p>Experienced in building dynamic full-stack solutions with scalable and efficient architectures.</p>
+            <div class="resume-download">
+                <a href="assets/KAPIL_SE.pdf" download>
+                    <img src="assets/download-icon.png" alt="Download Icon"> Download Resume
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/profile.jpg" alt="Kapil Harode">
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media" class="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/kapil_harode_mp09?igsh=djFyMG05MjBrbWJu" class="social-icon" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/Kapil281534" class="social-icon" target="_blank"><img src="assets/github.png" alt="GitHub"></a>
+            <a href="https://x.com/KapilHarode" class="social-icon" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/share/18iDiUFHFq/?mibextid=qi2Omg" class="social-icon" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/kapil-harode-13b03b26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </section>
+</body>
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset and Global Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: var(--bg-color, #f4f4f4); color: var(--text-color, #333); transition: all 0.3s ease-in-out; }
+:root { --primary-color: #6a11cb; --secondary-color: #2575fc; --bg-color: #ffffff; --text-color: #333; }
+[dark-mode] { --bg-color: #121212; --text-color: #ffffff; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; padding: 20px; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); color: #fff; }
+.logo { font-size: 24px; font-weight: bold; }
+.navlist { list-style: none; display: flex; gap: 20px; }
+.navlist li a { text-decoration: none; color: white; font-size: 18px; transition: 0.3s; }
+.navlist li a:hover { color: yellow; }
+.menu-icon { display: none; font-size: 30px; cursor: pointer; }
+
+/* Hero Section */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 50px; min-height: 100vh; }
+.content { max-width: 50%; }
+h1 { font-size: 3rem; font-weight: bold; }
+h2 { color: var(--primary-color); font-size: 2rem; margin: 10px 0; }
+.hero-image img { width: 350px; border-radius: 50%; }
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    padding: 50px 0;
+    background: var(--bg-color);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Resume Download Button with Icon */
+.resume-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.resume-download a {
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.resume-download img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.resume-download a:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+    .content { max-width: 90%; }
+    .hero-image img { width: 250px; }
+    .navlist { display: none; position: absolute; top: 60px; left: 0; width: 100%; padding: 20px; }
+    .navlist.active { display: flex; flex-direction: column; }
+    .menu-icon { display: block; }
+    .social-icons { flex-wrap: wrap; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Toggle Mobile Menu
+const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".navlist");
+
+menuIcon.addEventListener("click", () => { 
+    navList.classList.toggle("active"); 
+});
+
+// Theme Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const root = document.documentElement;
+
+themeToggle.addEventListener("click", () => {
+    if (root.hasAttribute("dark-mode")) {
+        root.removeAttribute("dark-mode");
+        localStorage.setItem("theme", "light");
+    } else {
+        root.setAttribute("dark-mode", "true");
+        localStorage.setItem("theme", "dark");
+    }
+});
+
+// Load Theme from LocalStorage
+if (localStorage.getItem("theme") === "dark") { 
+    root.setAttribute("dark-mode", "true"); 
+}
+
+// Skills Pop-up Toggle
+const skillsBtn = document.getElementById("skills-btn");
+const skillsPopup = document.getElementById("skills-popup");
+const closePopup = document.getElementById("close-popup");
+
+skillsBtn.addEventListener("click", () => {
+    skillsPopup.classList.remove("hidden");
+});
+
+closePopup.addEventListener("click", () => {
+    skillsPopup.classList.add("hidden");
+});
+
+// Close pop-up when clicking outside of it
+document.addEventListener("click", (e) => {
+    if (!skillsPopup.contains(e.target) && e.target !== skillsBtn) {
+        skillsPopup.classList.add("hidden");
+    }
+});
+
+// Social Media Icons Functionality
+const socialIcons = document.querySelectorAll(".social-icon");
+socialIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        window.open(icon.dataset.link, "_blank");
+    });
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('.navlist a').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        document.getElementById(targetId).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
